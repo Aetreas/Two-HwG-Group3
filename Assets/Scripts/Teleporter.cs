@@ -14,6 +14,15 @@ public class Teleporter : MonoBehaviour
 
    [SerializeField] GameObject player;
 
+    void Start()
+    {
+        
+    }
+
+    void Update()
+    {
+        
+    }
 
 
    private void OnTriggerEnter(Collider other) {

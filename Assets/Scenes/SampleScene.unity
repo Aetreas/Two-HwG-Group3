@@ -2260,7 +2260,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.116225846, y: 0.000000017089773, z: -0.0000000019998263, w: 0.99322283}
+  m_LocalRotation: {x: 0.116225846, y: -0.000000017089773, z: 0.0000000019998263, w: 0.99322283}
   m_LocalPosition: {x: 276.8304, y: 115.21, z: 2.1733284}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2818,7 +2818,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1130941001}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.11622583, y: 0.000000008544887, z: -9.999132e-10, w: 0.99322283}
+  m_LocalRotation: {x: 0.11622583, y: -0.000000008544885, z: 9.999129e-10, w: 0.99322283}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -4192,6 +4192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef3764313584514418d46b2f2501db68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleporter: {fileID: 1992276847}
   OnCollected:
     m_PersistentCalls:
       m_Calls:
@@ -7022,9 +7023,9 @@ SceneRoots:
   - {fileID: 985477526}
   - {fileID: 456082565}
   - {fileID: 1662245108}
+  - {fileID: 1831799162}
   - {fileID: 1992276848}
   - {fileID: 1988337142}
-  - {fileID: 1831799162}
   - {fileID: 1278113620932758389}
   - {fileID: 1835752351}
   - {fileID: 1906191804}
