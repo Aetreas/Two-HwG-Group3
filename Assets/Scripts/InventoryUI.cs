@@ -15,6 +15,15 @@ public class InventoryUI : MonoBehaviour
 
     public void UpdateCollectibleText(PlayerInventory playerInventory)
     {
-        collectibleText.text = playerInventory.NumberOfCollectibles.ToString();
+        int collectedCount = playerInventory.NumberOfCollectibles;
+        int totalCollectibles = 8;
+        collectibleText.text = $"{collectedCount}/{totalCollectibles}";
+        StartCoroutine(DisplayForDuration(2f)); 
+    }
+
+    IEnumerator DisplayForDuration(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        collectibleText.text = ""; 
     }
 }
