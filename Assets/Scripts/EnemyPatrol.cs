@@ -8,6 +8,8 @@ public class EnemyPatrol : MonoBehaviour
     public int targetPoint; //next waypoint
     public float speed;
 
+    public float rotationspeed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +27,9 @@ public class EnemyPatrol : MonoBehaviour
 
         
 
-        transform.LookAt(patrolPoints[targetPoint].position);
+        var targetRotation = Quaternion.LookRotation(patrolPoints[targetPoint].transform.position - transform.position);
+        
+        transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationspeed * Time.deltaTime);
     }
 
     void increaseTargetInt() //continues patrol movement
