@@ -8,6 +8,7 @@ public class PlayerInventory : MonoBehaviour
     public int NumberOfCollectibles { get; private set; }
 
     [SerializeField] GameObject teleporter;
+    [SerializeField] GameObject door;
 
     public UnityEvent<PlayerInventory> OnCollected;
 
@@ -19,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
 
     void Update()
     {
-        if (NumberOfCollectibles != 1)
+        if (NumberOfCollectibles != 9)
         {
             teleporter.SetActive(false);
         }
@@ -28,5 +29,16 @@ public class PlayerInventory : MonoBehaviour
         {
             teleporter.SetActive(true);
         }
+
+        if (NumberOfCollectibles != 15)
+        {
+            door.SetActive(false);
+        }
+
+        else
+        {
+            door.SetActive(true);
+        }
     }
+
 }
