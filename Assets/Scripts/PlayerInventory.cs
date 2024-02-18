@@ -20,7 +20,7 @@ public class PlayerInventory : MonoBehaviour
 
     void Update()
     {
-        if (NumberOfCollectibles != 9)
+        if (NumberOfCollectibles != 8)
         {
             teleporter.SetActive(false);
         }
@@ -30,7 +30,7 @@ public class PlayerInventory : MonoBehaviour
             teleporter.SetActive(true);
         }
 
-        if (NumberOfCollectibles != 15)
+        if (NumberOfCollectibles != 14)
         {
             door.SetActive(false);
         }
