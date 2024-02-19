@@ -25,6 +25,8 @@ public class FieldOfView : MonoBehaviour//this script handles virtually all enem
 
     public float rotationspeed;
 
+    [SerializeField] private AudioClip ratAlert;
+
     private void Start()
     {
         playerRef = GameObject.FindGameObjectWithTag("Player");
@@ -71,6 +73,7 @@ public class FieldOfView : MonoBehaviour//this script handles virtually all enem
             if (Vector3.Angle(transform.forward, directionToTarget) < angle / 2)
             {
                 float distanceToTarget = Vector3.Distance(transform.position, target.position);
+                SoundFXManager.Instance.PlaySoundFXClip(ratAlert, transform, 0.3f);
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                     canSeePlayer = true;

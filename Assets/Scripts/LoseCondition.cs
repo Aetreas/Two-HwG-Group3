@@ -9,7 +9,7 @@ public class LoseCondition : MonoBehaviour
 
     [SerializeField] GameObject player;
     [SerializeField] GameObject losetext;
-
+    [SerializeField] private AudioClip loseLaugh;
     public string loseScene;
 
     // Start is called before the first frame update
@@ -29,6 +29,7 @@ public class LoseCondition : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             SceneManager.LoadScene(loseScene);
+            SoundFXManager.Instance.PlaySoundFXClip(loseLaugh, transform, 0.2f);
         }
     }
 }

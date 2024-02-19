@@ -213,3 +213,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5aac4ab5a4d4e2468430c7ae67313a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wispCollect: {fileID: 8300000, guid: 89a41479169a67e478936c8a7acaebee, type: 3}
