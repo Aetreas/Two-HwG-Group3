@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyPatrol : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour //this is a dead script pretty much, but keeping it around just in case
 {
     public Transform[] patrolPoints;
     public int targetPoint; //next waypoint

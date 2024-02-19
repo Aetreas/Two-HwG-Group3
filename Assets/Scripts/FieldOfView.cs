@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FieldOfView : MonoBehaviour
+public class FieldOfView : MonoBehaviour//this script handles virtually all enemy movement
 {
     public float radius;
     [Range(0,360)]//limits angle in editor
@@ -35,7 +35,7 @@ public class FieldOfView : MonoBehaviour
 
     void Update()
     {
-        if(canSeePlayer == true)
+        if(canSeePlayer == true)//this method causes the enemy to chase the player
         {
             transform.position = Vector3.MoveTowards(this.transform.position, playerPos.position, 10 * Time.deltaTime);
             var targetRotation = Quaternion.LookRotation(playerPos.position - transform.position);
@@ -59,7 +59,7 @@ public class FieldOfView : MonoBehaviour
         }
     }
 
-    public void FieldOfViewCheck()//detects player character
+    public void FieldOfViewCheck()//detects player character, respects objects on the wall layer such that player cannot be chased or seen through them.
     {
         Collider[] rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
 
@@ -84,7 +84,7 @@ public class FieldOfView : MonoBehaviour
             canSeePlayer = false;
     }
 
-        void patrolMovement()
+        void patrolMovement()//moves enemy along a set of waypoints
         {
             if(transform.position == patrolPoints[targetPoint].position)
         {

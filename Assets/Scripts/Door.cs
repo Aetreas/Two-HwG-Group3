@@ -1,8 +1,8 @@
 using System.Collections;
-
 using System.Collections.Generic;
-
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 
 
@@ -13,6 +13,8 @@ public class Door : MonoBehaviour
 
    [SerializeField] GameObject player;
    [SerializeField] GameObject wintext;
+
+   public string winScene;
 
 
     void Start()
@@ -26,10 +28,9 @@ public class Door : MonoBehaviour
     }
 
 
-   private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter(Collider other)//player enters the door and triggers win scene
    {
-      wintext.SetActive(true);
-      player.SetActive(false);
+      SceneManager.LoadScene(winScene);
    }
 
 

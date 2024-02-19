@@ -8,7 +8,7 @@ using UnityEngine;
 
 
 
-public class VisionCone : MonoBehaviour
+public class VisionCone : MonoBehaviour//this script is purely a visual indicator to the "danger zone" in which the player will be detected
 
 {
 
