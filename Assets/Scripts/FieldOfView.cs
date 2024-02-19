@@ -77,6 +77,7 @@ public class FieldOfView : MonoBehaviour//this script handles virtually all enem
 
                 if (!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
                     canSeePlayer = true;
+                    
                 else
                     canSeePlayer = false;
             }

@@ -23,20 +23,12 @@ public class SoundFXManager : MonoBehaviour
     {
             AudioSource audioSource = Instantiate(soundFXObject, spawnTransform.position, Quaternion.identity);
 
-            if(audioSource.isPlaying)
-        {
-            return;
-        
-        } else
-        {
             audioSource.clip = audioClip;
             audioSource.volume = volume;
             audioSource.loop = false;
             audioSource.Play();
             float clipLength = audioSource.clip.length;
             Destroy(audioSource.gameObject, clipLength);
-        }
-            
 
     }
 }

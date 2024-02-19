@@ -12,6 +12,9 @@ public class PlayerInventory : MonoBehaviour
 
     public UnityEvent<PlayerInventory> OnCollected;
 
+    [SerializeField] private AudioClip teleportActive;
+
+    
     public void Collected()
     {
         NumberOfCollectibles++;
@@ -38,6 +41,15 @@ public class PlayerInventory : MonoBehaviour
         else
         {
             door.SetActive(true);
+        }
+    }
+
+    public void teleportSound()
+    {
+        if (NumberOfCollectibles == 8)
+        {
+            SoundFXManager.Instance.PlaySoundFXClip(teleportActive, transform, 0.5f);
+
         }
     }
 

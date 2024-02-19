@@ -11,8 +11,13 @@ public class UIManager : MonoBehaviour
         Debug.Log("Quitting game");
     }
 
+    IEnumerator sceneLoad()
+    {
+        yield return new WaitForSeconds(4);
+    }
     public void LoadScene(string sceneName)
     {
+        sceneLoad();
         SceneManager.LoadScene("SampleScene");
     }
 }
