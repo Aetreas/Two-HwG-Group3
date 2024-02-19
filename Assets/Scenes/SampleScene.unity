@@ -9814,12 +9814,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 60bc526f4be1e044ab9e46340b82ffb3, type: 3}
+      propertyPath: InitialModule.maxNumParticles
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 19800004, guid: 60bc526f4be1e044ab9e46340b82ffb3, type: 3}
       propertyPath: InitialModule.startSize.scalar
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 60bc526f4be1e044ab9e46340b82ffb3, type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 2.3
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 19800004, guid: 60bc526f4be1e044ab9e46340b82ffb3, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
