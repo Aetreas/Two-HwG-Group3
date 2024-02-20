@@ -14,6 +14,8 @@ public class Teleporter : MonoBehaviour
 
    [SerializeField] GameObject player;
 
+   public bool teleportInput = false;
+
     void Start()
     {
         
@@ -21,13 +23,26 @@ public class Teleporter : MonoBehaviour
 
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.E))
+        {
+            teleportInput = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.E))
+        {
+            teleportInput = false;
+        }
     }
 
 
-   private void OnTriggerEnter(Collider other) {
+   private void OnTriggerStay(Collider other) {
 
-       StartCoroutine(Teleport());
+    if(teleportInput == true)
+    {
+        StartCoroutine(Teleport());
+    }
+
+    
 
    }
 
