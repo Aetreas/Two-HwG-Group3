@@ -23,12 +23,12 @@ public class Teleporter : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E))
+        if(Input.GetButtonDown("Interact"))
         {
             teleportInput = true;
         }
 
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetButtonUp("Interact"))
         {
             teleportInput = false;
         }
